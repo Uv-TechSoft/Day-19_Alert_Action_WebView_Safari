@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vTC-b4-zL8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alert_Action_WebView_Safari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="R0b-ta-jH2">
+                                <rect key="frame" x="165.5" y="362" width="83.5" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNB-V7-PT4">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Alert"/>
+                                        <connections>
+                                            <action selector="alertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvU-mU-PFB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1N-Bg-UoK">
+                                        <rect key="frame" x="0.0" y="47" width="83.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Action"/>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLj-68-R1m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-3y-cpg">
+                                        <rect key="frame" x="0.0" y="94" width="83.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="WebView"/>
+                                        <connections>
+                                            <action selector="buttonWebViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KiT-iG-mvY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-ax-Kag">
+                                        <rect key="frame" x="0.0" y="141" width="83.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Safari"/>
+                                        <connections>
+                                            <action selector="buttonSafariTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXi-EA-Vnm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R0b-ta-jH2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DxE-WY-97I"/>
+                            <constraint firstItem="R0b-ta-jH2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VuY-4g-fNO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RAM-15-2Ut"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="77.678571428571431"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="93H-kb-A7h">
+            <objects>
+                <viewController storyboardIdentifier="WKWebViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fss-dY-Jz1" customClass="WKWebViewViewController" customModule="Alert_Action_WebView_Safari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shl-3t-KyG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rys-aP-Vgx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pDy-8h-hBW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rys-aP-Vgx" firstAttribute="leading" secondItem="pDy-8h-hBW" secondAttribute="leading" id="2Ub-Z8-rLr"/>
+                            <constraint firstItem="rys-aP-Vgx" firstAttribute="top" secondItem="pDy-8h-hBW" secondAttribute="top" id="3VQ-fh-Oga"/>
+                            <constraint firstAttribute="bottom" secondItem="rys-aP-Vgx" secondAttribute="bottom" id="Ow3-0D-oya"/>
+                            <constraint firstItem="pDy-8h-hBW" firstAttribute="trailing" secondItem="rys-aP-Vgx" secondAttribute="trailing" id="cAE-Op-eYD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YTw-Xl-wDP"/>
+                    <connections>
+                        <outlet property="webView" destination="rys-aP-Vgx" id="b3f-8I-c6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioZ-WM-C4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="78"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c4g-Px-VmU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vTC-b4-zL8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o45-aL-npE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DmN-cB-2Qf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FV5-hU-1u3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
